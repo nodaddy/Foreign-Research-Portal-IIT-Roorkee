@@ -30,10 +30,10 @@ function App() {
           <Route exact path="/">
             <Profile personName="Neelesh Sharma" department="Mechanical Department" enrollmentNo="16119014" email="nsharma1@me.iitr.ac.in" PP={logo}></Profile>
           </Route>
-          <Route path="/projects">
+          <Route path="http://nodaddy.github.io/Foreign-Research-Portal/projects">
             <Projects/>
           </Route>
-          <Route path="/yourapplications">
+          <Route path="http://nodaddy.github.io/Foreign-Research-Portal/yourapplications">
             <ProjectApplications/>
           </Route>
           <Route path="/bookmarks">
