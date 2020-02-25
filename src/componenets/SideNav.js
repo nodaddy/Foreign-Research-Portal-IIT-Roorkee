@@ -7,10 +7,10 @@ class SideNav extends Component{
         return(
             <div className="container-fluid"><br/>
                <div className="row sideNavLink" align="center">
-                 <a href="/projects" id="projects" className="col-sm-12">Projects</a>
+                 <a href="http://nodaddy.github.io/Foreign-Research-Portal/projects" id="projects" className="col-sm-12">Projects</a>
                  </div>
                 <div className="row sideNavLink" align="center">
-                    <a href="/yourapplications"  id="yourApplications" className="col-sm-12">Your Applications</a>
+                    <a href="http://nodaddy.github.io/Foreign-Research-Portal/yourapplications"  id="yourApplications" className="col-sm-12">Your Applications</a>
                  </div>
                  <div className="row sideNavLink" align="center">
                     <a href="/bookmarks" id="bookmarks" className="col-sm-12">Bookmarks</a>
