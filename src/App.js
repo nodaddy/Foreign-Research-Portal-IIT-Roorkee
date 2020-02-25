@@ -23,7 +23,7 @@ function App() {
     <div className="container-fluid App">
     <TopNav></TopNav>
       <div className="row" align="center" style={{width:'100%'}}>
-        <div className="col-sm-2" style={{borderbottom:'0px inset silver',padding:'0px',margin:'0px',boxShadow:'2px 2px 7px 0px silver'}}><SideNav></SideNav></div>
+        <div className="col-sm-2" style={{borderbottom:'0px inset silver',padding:'0px',margin:'0px',height:'87vh',boxShadow:'2px 2px 7px 0px silver'}}><SideNav></SideNav></div>
         <div className="col-sm-10" style={{margin:'0px',padding:'0px'}} align="left">
         <Router>
         <Switch>
