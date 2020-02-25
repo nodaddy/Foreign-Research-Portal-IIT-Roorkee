@@ -1,0 +1,54 @@
+.projectDetailapp{
+    padding-bottom:10px;
+    background:#FCFDFE;;
+    border-radius: 5px;
+    margin-bottom:10px;
+    box-shadow: 3px 2px 4px 2px silver; 
+    }
+    
+    .projectDetailsColapp{
+    padding-top:25px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    }
+    
+    .heading{
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    
+    color: #072662;
+    }
+    
+    /*.projectData{
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    
+    color: #FFFBFB;
+    }*/
+    #rot{
+    width: 13.5px;
+    height: 13.5px;
+    margin-left:10px;
+     
+    transform: rotate(45deg);
+    }
+    #rec{
+    width: 19.46px;
+    height: 53.26px;
+    margin-left:10px;
+    margin-bottom:-7px;
+    
+    border-radius: 0px;
+    transform:translate(-3px, 0px);
+    }

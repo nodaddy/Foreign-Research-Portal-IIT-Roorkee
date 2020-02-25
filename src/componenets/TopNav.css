@@ -1,0 +1,36 @@
+#TopNav{
+margin:0px;
+height: 13vh;
+left: 0px;
+background: #0B83DA;
+}
+
+div{
+  /*  border:1px solid black;*/
+}
+
+#navbarTitle{
+top: 3vh !important;
+font-family: Tw Cen MT;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+
+
+color: #FFFFFF;
+}
+
+#rightOfNav{
+
+top: 3vh;
+
+font-family: Barlow;
+font-style: normal;
+/*font-weight: 600;*/
+font-size: 20px;
+/*line-height: 29px;*/
+/* identical to box height */
+
+
+color: #FEFEFF;
+}
