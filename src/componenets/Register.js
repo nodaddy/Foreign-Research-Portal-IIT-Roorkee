@@ -49,7 +49,7 @@ class Register extends Component{
 
                     </div>
                     <div  className="col-sm-8" align="center">
-                        <form method="post" onSubmit={this.registerSubmit}>
+                        <form class="phom" method="post" onSubmit={this.registerSubmit}>
                         <input name="name" type="text" placeholder="Name"></input>
                         <br/>
                         <br/>
