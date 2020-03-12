@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TopNav from './componenets/TopNav';
+import Login from './componenets/Login';
 import SideNav from './componenets/SideNav';
 import Projects from './componenets/Projects'
 import ProjectApplications from './componenets/Applications';
@@ -10,6 +11,7 @@ import Experiences from './componenets/Experiences';
 import Results from './componenets/Results';
 import Team from './componenets/Team';
 import Home from './componenets/Home';
+import Register from './componenets/Register';
 import Profile from './componenets/Profile'
 import {
   BrowserRouter as Router,
@@ -18,7 +20,12 @@ import {
   Link,
 } from 'react-router-dom'; 
 
+
 function App() {
+
+  
+
+
   return (
     <div className="container-fluid App">
     <TopNav></TopNav>
@@ -27,9 +34,9 @@ function App() {
         <div className="col-sm-10" style={{margin:'0px',padding:'0px'}} align="left">
         <Router>
         <Switch>
-          <Route exact path="/">
-            <Profile personName="Neelesh Sharma" department="Mechanical Department" enrollmentNo="16119014" email="nsharma1@me.iitr.ac.in" PP={logo}></Profile>
-          </Route>
+         { <Route exact path="/">
+            <Profile ></Profile>
+  </Route>}
           <Route path="/projects">
             <Projects/>
           </Route>
@@ -47,6 +54,9 @@ function App() {
           </Route>
           <Route path="/team">
             <Team/>
+          </Route>
+          <Route path="/register">
+            <Register></Register>
           </Route>
         </Switch>
         </Router>
