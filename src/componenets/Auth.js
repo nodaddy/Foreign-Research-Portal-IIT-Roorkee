@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react'
+import React, {Component} from 'react'
 import './Login.css'
 import axios from "axios";
 import {API_ENDPOINT} from "../config";
@@ -30,9 +30,9 @@ class Auth extends Component {
                             <button onClick={this.login}>login</button>
                             <p className="message">
                                 Not registered?
-                                <a href='#' onClick={() => {
+                                <span className="link" onClick={() => {
                                     this.setState({mode: 'register'})
-                                }}>Create an account</a>
+                                }}>Create an account</span>
                             </p>
                         </div>
                         :
@@ -65,9 +65,9 @@ class Auth extends Component {
                             <br/>
                             <br/>
                             <button>Register</button>
-                            <p className="message">Already registered? <a href="#" onClick={() => {
+                            <p className="message">Already registered? <span className="link" onClick={() => {
                                 this.setState({mode: 'login'})
-                            }}>Sign In</a></p>
+                            }}>Sign In</span></p>
                         </div>
                     }
                 </div>

@@ -48,7 +48,7 @@
   color: #b3b3b3;
   font-size: 12px;
 }
-.form .message a {
+.form .message span {
   color: #4CAF50;
   text-decoration: none;
 }
@@ -81,7 +81,7 @@
   color: #4d4d4d;
   font-size: 12px;
 }
-.container .info span a {
+.container .info span {
   color: #000000;
   text-decoration: none;
 }
@@ -91,5 +91,8 @@
 body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;      
+  -moz-osx-font-smoothing: grayscale;
+}
+.link {
+    cursor: pointer;
 }
