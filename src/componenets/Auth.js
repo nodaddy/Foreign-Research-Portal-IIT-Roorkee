@@ -37,34 +37,70 @@ class Auth extends Component {
                         </div>
                         :
                         <div className="login-form">
-                            <input type="text" placeholder="Name"/>
-                            <br/>
-                            <br/>
-                            <input type="password" placeholder="Department"/>
-                            <br/>
-                            <br/>
-                            <input type="text" placeholder="Department"/>
-                            <br/>
-                            <br/>
-                            <input type="text" placeholder="Enrollment Number"/>
-                            <br/>
-                            <br/>
-                            <input type="text" placeholder="Phone"/>
-                            <br/>
-                            <br/>
-                            <input type="text" placeholder="Year of graduation"/>
-                            <br/>
-                            <br/>
-                            <input type="email" placeholder="Email"/>
-                            <br/>
-                            <br/>
-                            <input type="text" placeholder="Skype"/>
-                            <br/>
-                            <br/>
-                            <input type="text" placeholder="Resume"/>
-                            <br/>
-                            <br/>
-                            <button>Register</button>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_name: e.target.value})
+                                }}
+                                type="text"
+                                placeholder="Name"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_password: e.target.value})
+                                }}
+                                type="password"
+                                placeholder="Department"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_dept: e.target.value})
+                                }}
+                                type="text"
+                                placeholder="Department"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_enrlno: e.target.value})
+                                }}
+                                type="text"
+                                placeholder="Enrollment Number"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_phone: e.target.value})
+                                }}
+                                type="text"
+                                placeholder="Phone"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_grad_yr: e.target.value})
+                                }}
+                                type="text"
+                                placeholder="Year of graduation"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_email: e.target.value})
+                                }}
+                                type="email"
+                                placeholder="Email"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_skype: e.target.value})
+                                }}
+                                type="text"
+                                placeholder="Skype"/>
+                            <br/><br/>
+                            <input
+                                onChange={(e) => {
+                                    this.setState({r_resume: e.target.value})
+                                }}
+                                type="text"
+                                placeholder="Resume"/>
+                            <br/><br/>
+                            <button onClick={this.register}>Register</button>
                             <p className="message">Already registered? <span className="link" onClick={() => {
                                 this.setState({mode: 'login'})
                             }}>Sign In</span></p>
@@ -82,6 +118,30 @@ class Auth extends Component {
                 {
                     username: this.state.l_username,
                     password: this.state.l_password
+                })
+            .then((res) => {
+                localStorage.setItem('token', res.data.token);
+                window.location.reload();
+            })
+            .catch(() => {
+                alert(`Error Logging In`)
+            })
+    }.bind(this);
+
+    register = function () {
+        axios
+            .post(
+                API_ENDPOINT + 'users/register/',
+                {
+                    name: this.state.r_name,
+                    password: this.state.r_password,
+                    dept: this.state.r_dept,
+                    enrlno: this.state.r_enrlno,
+                    phone: this.state.r_phone,
+                    graduation: this.state.r_grad_yr,
+                    email: this.state.r_email,
+                    skype: this.state.r_skype,
+                    resume: this.state.r_resume
                 })
             .then((res) => {
                 localStorage.setItem('token', res.data.token);
