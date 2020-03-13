@@ -10,8 +10,8 @@ class Auth extends Component {
 
     render() {
         return (
-            <div class="login-page">
-                <div class="form">
+            <div className="login-page">
+                <div className="form">
                     {this.state.mode === 'login' ?
                         <div className="login-form" onSubmit={() => {
                         }}>
