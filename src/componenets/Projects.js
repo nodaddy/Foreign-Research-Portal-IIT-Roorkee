@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import './Projects.css';
 import {tagLogo} from '../assets'
 import {withRouter} from 'react-router-dom';
+import axios from "axios";
 
 
 
@@ -29,6 +30,11 @@ function ProjectDetails(props){
 
 class Projects extends Component{
 //Component to be rendered through App.js
+
+    componentDidMount(){
+
+    }
+
 
     render(){
         return(

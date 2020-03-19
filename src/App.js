@@ -73,6 +73,11 @@ function App() {
                                     redirectTo='/auth'
                                     path='/team'
                                     component={Team}/>
+                                <AuthRoute
+                                    authenticated={isLoggedIn}
+                                    redirectTo='/auth'
+                                    path='/'
+                                    component={Profile}/>
                             </Switch>
                         </HashRouter>
                     </div>

@@ -9,6 +9,14 @@ div{
   /*  border:1px solid black;*/
 }
 
+.hoverHand:hover{
+  cursor: pointer;
+}
+.hoverHand{
+  background: rgb(10, 116, 192);
+  border: 0px;
+}
+
 #navbarTitle{
 top: 3vh !important;
 font-family: Tw Cen MT;

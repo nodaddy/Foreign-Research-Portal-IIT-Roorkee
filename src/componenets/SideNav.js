@@ -20,7 +20,7 @@ class SideNav extends Component {
                 </div>
                 <hr/>
                 <div className="row sideNavLink" align="center">
-                    <Link to="/experiences" id="experience" className="col-sm-12 sideNavLink1">Experience</Link>
+                    <a href="https://ir.iitr.ac.in/" target="iriitr" id="experience" className="col-sm-12 sideNavLink1">Experience</a>
                 </div>
                 <hr/>
                 <div className="row sideNavLink" align="center">
