@@ -1,6 +1,8 @@
 #idCard{
     padding-top:40px;
     padding-left:80px;
+    color: #072662;
+    font-family: Barlow;
 }
 
 #personName{
@@ -14,4 +16,15 @@ color: #072662;
 #PP{
     height:75%;
     width:75%;
+}
+
+.spa{
+    font-weight: 500;
+    font-size: 17px;
+}
+#additionalInfo{
+    padding-top:40px;
+    padding-left:80px;
+    color: #072662;
+    font-family: Barlow;
 }

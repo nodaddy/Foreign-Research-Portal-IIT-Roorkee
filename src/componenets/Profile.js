@@ -5,10 +5,14 @@ import { API_ENDPOINT } from '../config';
 
 class Profile extends Component {
     state = {
-        "name": null,
-        "department": null,
-        "enorllment_no": null,
-        "email":null,
+        "name": 'NA',
+        "department": 'NA',
+        "enorllment_no": 'NA',
+        "email":'NA',
+        "year":'NA',
+        "skype":'NA',
+        "phone":'NA',
+        "cv":'NA',
     }
 
     componentDidMount(){
@@ -20,9 +24,13 @@ class Profile extends Component {
         .then((res)=>{
             this.setState({
         "name": res.data.name,
-        "department": null,
-        "enorllment_no": null,
-        "email":null,
+        "department": res.data.dept,
+        "enorllment_no": res.data.enrol_no,
+        "email": res.data.email,
+        "year":res.data.year,
+        "phone":res.data.phone,
+        "skype": res.data.skype,
+        "cv": res.data.cv,
             });
         });
     }
@@ -34,11 +42,12 @@ class Profile extends Component {
             <div className="container-fluid">
                 <div className="row" id="idCard">
                     <div className="col-sm-5" align="left">
-                        <h3 id="personName">Name: {this.state.name}</h3>
+                        <h2 id="personName">{this.state.name}</h2>
 
-                        <span id="department">Department: {this.state.department}</span><br/>
-                        <span id="enrollmentNo">enrollment No: {this.state.enorllment_no}</span><br/>
-                        <span id="email">Email: {this.state.email}</span><br/>
+                        <span className="spa" id="department">Department : {this.state.department}</span><br/>
+                        <span className="spa" id="enrollmentNo">Enrollment Number : {this.state.enorllment_no}</span><br/>
+                        <span className="spa" id="year">Year : {this.state.year}</span><br/>
+                        <span className="spa" id="email">Email Address: {this.state.email}</span><br/>
 
                     </div>
                     <div className="col-sm-4" align="right">
@@ -47,7 +56,15 @@ class Profile extends Component {
                     <div className="col-sm-3" align="right">
 
                     </div>
+                </div><br/>
+                <hr/>
+                <div className="row"  align="left" id="additionalInfo"><br/>
+                    <div className="col-sm-6"><span className="spa" id="phone">Phone : {this.state.phone}</span><br/>
+                    <span className="spa" id="phone">Drive link to CV : {this.state.cv}</span>
+                    </div>
+                    <div className="col-sm-6"><span className="spa" id="phone">Skype Name : {this.state.skype}</span></div>
                 </div>
+                
             </div>
         );
     }

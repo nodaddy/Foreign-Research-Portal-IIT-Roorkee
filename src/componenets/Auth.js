@@ -136,12 +136,12 @@ class Auth extends Component {
                     name: this.state.r_name,
                     password: this.state.r_password,
                     dept: this.state.r_dept,
-                    enrlno: this.state.r_enrlno,
+                    enrl_no: this.state.r_enrlno,
                     phone: this.state.r_phone,
-                    graduation: this.state.r_grad_yr,
+                    year: this.state.r_grad_yr,
                     email: this.state.r_email,
                     skype: this.state.r_skype,
-                    resume: this.state.r_resume
+                    cv: this.state.r_resume
                 })
             .then((res) => {
                 localStorage.setItem('token', res.data.token);

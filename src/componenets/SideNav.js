@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 class SideNav extends Component {
     render() {
         return (
-            <div className="container-fluid"><br/>
+            <div className="container-fluid"  align="center"><br/>
                 <div className="row sideNavLink" align="center">
                     <Link to="/projects" id="projects" className="col-sm-12">Projects</Link>
                 </div>

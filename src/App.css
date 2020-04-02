@@ -8,6 +8,16 @@ div{
  /*border:1px solid black;*/
 }
 
+#content-mobile { display:none;}
+/* Smartphone Portrait and Landscape */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px){ #content-mobile { display: inline;}
+#content-desktop{display:none;}}
+
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

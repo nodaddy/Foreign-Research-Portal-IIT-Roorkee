@@ -18,7 +18,7 @@ const isLoggedIn = !(localStorage.getItem('token') == null || localStorage.getIt
 function App() {
     return (
         <HashRouter>
-            <div className="container-fluid App">
+            <div className="container-fluid App" id="content-desktop">
                 <TopNav loggedIn={isLoggedIn}/>
                 <div className="row" align="center" style={{width: '100%'}}>
                     <div className="col-sm-2" style={{
@@ -83,6 +83,9 @@ function App() {
                     </div>
                 </div>
             </div>
+            
+            <div id="content-mob￼ile">Mobile devices are not supported yet, <br/>
+                    </div>
         </HashRouter>
     );
 }
