@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Foreign-Research-Portal/static/css/main.a94c6a3d.chunk.css",
-    "main.js": "/Foreign-Research-Portal/static/js/main.4d905cab.chunk.js",
-    "main.js.map": "/Foreign-Research-Portal/static/js/main.4d905cab.chunk.js.map",
+    "main.js": "/Foreign-Research-Portal/static/js/main.2d2710ed.chunk.js",
+    "main.js.map": "/Foreign-Research-Portal/static/js/main.2d2710ed.chunk.js.map",
     "runtime-main.js": "/Foreign-Research-Portal/static/js/runtime-main.d095deef.js",
     "runtime-main.js.map": "/Foreign-Research-Portal/static/js/runtime-main.d095deef.js.map",
     "static/js/2.f50ad125.chunk.js": "/Foreign-Research-Portal/static/js/2.f50ad125.chunk.js",
     "static/js/2.f50ad125.chunk.js.map": "/Foreign-Research-Portal/static/js/2.f50ad125.chunk.js.map",
     "index.html": "/Foreign-Research-Portal/index.html",
-    "precache-manifest.69110e4775b686aac9be6751b8cba3e4.js": "/Foreign-Research-Portal/precache-manifest.69110e4775b686aac9be6751b8cba3e4.js",
+    "precache-manifest.58d7202dc96f2cef45c3e628dab20fd3.js": "/Foreign-Research-Portal/precache-manifest.58d7202dc96f2cef45c3e628dab20fd3.js",
     "service-worker.js": "/Foreign-Research-Portal/service-worker.js",
     "static/css/main.a94c6a3d.chunk.css.map": "/Foreign-Research-Portal/static/css/main.a94c6a3d.chunk.css.map",
     "static/js/2.f50ad125.chunk.js.LICENSE.txt": "/Foreign-Research-Portal/static/js/2.f50ad125.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d095deef.js",
     "static/js/2.f50ad125.chunk.js",
     "static/css/main.a94c6a3d.chunk.css",
-    "static/js/main.4d905cab.chunk.js"
+    "static/js/main.2d2710ed.chunk.js"
   ]
 }
