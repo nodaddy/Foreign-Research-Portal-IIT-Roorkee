@@ -49,7 +49,7 @@ class Auth extends Component {
                                     this.setState({r_password: e.target.value})
                                 }}
                                 type="password"
-                                placeholder="Department"/>
+                                placeholder="Password"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
@@ -127,7 +127,7 @@ class Auth extends Component {
                 alert(`Error Logging In`)
             })
     }.bind(this);
-
+    ••••••••
     register = function () {
         axios
             .post(
