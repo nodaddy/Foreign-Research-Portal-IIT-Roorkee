@@ -1,6 +1,6 @@
 #TopNav{
 margin:0px;
-height: 13vh;
+height: 14vh;
 left: 0px;
 background: #0B83DA;
 }
@@ -18,7 +18,7 @@ div{
 }
 
 #navbarTitle{
-top: 3vh !important;
+/*top: 3vh !important;*/
 font-family: Tw Cen MT;
 font-style: normal;
 font-weight: bold;
@@ -41,4 +41,12 @@ font-size: 20px;
 
 
 color: #FEFEFF;
+}
+
+button.r{
+  background: transparent;
+  border: 0px;
+}
+button:hover{
+  cursor: auto;
 }

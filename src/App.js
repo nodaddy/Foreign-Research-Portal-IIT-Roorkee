@@ -35,7 +35,7 @@ function App() {
                             <Switch>
                                 <AuthRoute
                                     authenticated={!isLoggedIn}
-                                    redirectTo='/dashboard'
+                                    redirectTo='/projects'
                                     path='/auth'
                                     component={Auth}/>
                                 <AuthRoute

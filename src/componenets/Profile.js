@@ -63,11 +63,34 @@ class Profile extends Component {
                     <span className="spa" id="phone">Drive link to CV : {this.state.cv}</span>
                     </div>
                     <div className="col-sm-6"><span className="spa" id="phone">Skype Name : {this.state.skype}</span></div>
+  
                 </div>
-                
-            </div>
+                <div className="row"  align="left" id="additionalInfo" style={{paddingLeft:'90px'}}><br/>
+                    <button onClick={this.logout} className="col-sm-1 hoverHand" id="rightOfNav">Logout </button>
+                </div>
+
+                 </div>
+
         );
     }
+
+    logout = function () {
+        axios
+            .get(
+                API_ENDPOINT + 'users/logout/',
+                {
+                    headers: {
+                        Authorization: 'Token ' + localStorage.getItem('token')
+                    }
+                }
+            ).finally(() => {
+            localStorage.clear();
+            window.location.reload();
+        })
+    }.bind(this)
+
 }
+
+
 
 export default Profile;

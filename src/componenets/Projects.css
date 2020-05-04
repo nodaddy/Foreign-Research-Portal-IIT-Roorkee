@@ -1,5 +1,4 @@
 .projectDetail{
-    padding-bottom:10px;
     background: #0B83DA;
     border-radius: 5px;
     margin-bottom:10px;
@@ -7,7 +6,7 @@
     
 
 .projectDetailsCol{
-padding-top:25px;
+padding:20px;
 font-family: Barlow;
 font-style: normal;
 font-weight: 500;

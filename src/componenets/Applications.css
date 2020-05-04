@@ -1,13 +1,12 @@
-.projectDetailapp{
-    padding-bottom:10px;
-    background:#FCFDFE;;
+    .projectDetailapp{
+    background:#FCFDFE;
     border-radius: 5px;
     margin-bottom:10px;
     box-shadow: 3px 2px 4px 2px silver; 
     }
     
     .projectDetailsColapp{
-    padding-top:25px;
+    padding:20px;
     font-family: Barlow;
     font-style: normal;
     font-weight: 500;
@@ -45,10 +44,14 @@
     }
     #rec{
     width: 19.46px;
-    height: 53.26px;
+    height: 100%;
     margin-left:10px;
     margin-bottom:-7px;
     
     border-radius: 0px;
     transform:translate(-3px, 0px);
+    }
+
+    #university{
+        
     }

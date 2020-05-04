@@ -44,7 +44,10 @@ class Projects extends Component{
                 <div className="row" align="center" style={{padding:'0px',width:'100%'}}>
                     <div className="col-sm-12" id="ProjectDetailsArea">
                     {/*ProjectDetail is function Component defined in the above code*/}
-                    <ProjectDetails title="Project Title :" university="University :" deadline="Deadline :"></ProjectDetails>
+                    <ProjectDetails title="Enhance Photoelectrochemistry by Titanium Nanotube to Realize Early Detection of Alzheimer's Disease
+" university="Chang Gung University
+" deadline=" 3rd Feb 2020
+" statusColor="#53E010"></ProjectDetails>
                     <ProjectDetails title="Project Title :" university="University :" deadline="Deadline :"></ProjectDetails>
                     
 

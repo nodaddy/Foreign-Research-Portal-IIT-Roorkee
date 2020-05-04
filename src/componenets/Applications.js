@@ -14,11 +14,11 @@ function ApplicationDetails(props){
             <div className="row projectData">
             <div className="col-sm-1">
             <img id="rec" style={{backgroundColor:props.statusColor}}></img><br/>
-            <div id="rot" style={{backgroundColor:props.statusColor}}></div>
+            
             </div>
-                <div className="col-sm-5 projectDetailsColapp" id="projectTitle">{props.title}</div>
-                <div className="col-sm-3 projectDetailsColapp" id="university">{props.university}</div>
-                <div className="col-sm-3 projectDetailsColapp" id="deadline">{props.deadline}</div>
+                <div className="col-sm-5 projectDetailsColapp"  id="projectTitle">{props.title}</div>
+                <div className="col-sm-3 projectDetailsColapp"  id="university">{props.university}</div>
+                <div className="col-sm-3 projectDetailsColapp"  id="deadline">{props.deadline}</div>
             </div>
         </div>
     </div>
@@ -40,9 +40,14 @@ class Applications extends Component{
                   
                     <div className="col-sm-12" id="ProjectDetailsArea">
                     {/*ProjectDetail is function Component defined in the above code*/}
-                    <ApplicationDetails title="Project Title :" university="University :" deadline="Deadline :" statusColor="#53E010"></ApplicationDetails>
-                    <ApplicationDetails title="Project Title :" university="University :" deadline="Deadline :" statusColor="#53E010"></ApplicationDetails>
-                    
+                    <ApplicationDetails title="Enhance Photoelectrochemistry by Titanium Nanotube to Realize Early Detection of Alzheimer's Disease
+" university="Chang Gung University
+" deadline=" 3rd Feb 2020
+" statusColor="#53E010"></ApplicationDetails>
+                   <ApplicationDetails title="Enhance Photoelectrochemistry by Titanium Nanotube to Realize Early Detection of Alzheimer's Disease
+" university="Chang Gung University
+" deadline="21st Feb 2020
+" statusColor="#53E010"></ApplicationDetails>
 
                     </div>
                 </div>
