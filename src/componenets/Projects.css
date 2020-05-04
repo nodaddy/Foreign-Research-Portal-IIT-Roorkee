@@ -7,7 +7,7 @@
 
 .projectDetailsCol{
 padding:20px;
-font-family: Barlow;
+font-family: roboto;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
@@ -15,7 +15,7 @@ color: #FFFBFB;
 }
 
 .heading{
-font-family: Barlow;
+font-family: roboto;
 font-style: normal;
 font-weight: bold;
 font-size: 30px;
@@ -27,7 +27,7 @@ color: #072662;
 }
 
 /*.projectData{
-font-family: Barlow;
+font-family: roboto;
 font-style: normal;
 font-weight: 600;
 font-size: 18px;

@@ -127,7 +127,7 @@ class Auth extends Component {
                 alert(`Error Logging In`)
             })
     }.bind(this);
-    ••••••••
+
     register = function () {
         axios
             .post(
