@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6e6aabc019253551a3222c8de2a0d9c9",
+    "revision": "e151367d964a6d0fceb15928208a07a6",
     "url": "/Foreign-Research-Portal/index.html"
   },
   {
-    "revision": "1b8e128f6695a3280d11",
+    "revision": "7674446b94ed6afbd7c7",
     "url": "/Foreign-Research-Portal/static/css/main.74296988.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Foreign-Research-Portal/static/js/2.7ddec9c9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1b8e128f6695a3280d11",
-    "url": "/Foreign-Research-Portal/static/js/main.ce104c01.chunk.js"
+    "revision": "7674446b94ed6afbd7c7",
+    "url": "/Foreign-Research-Portal/static/js/main.bdceabf8.chunk.js"
   },
   {
     "revision": "829cb499d72ae537cde4",
