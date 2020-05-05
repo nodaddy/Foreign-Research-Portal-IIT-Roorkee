@@ -3,7 +3,20 @@
     border-radius: 5px;
     margin-bottom:10px;
     }
-    
+.projectDetail:hover{
+    cursor: pointer;
+    background:linear-gradient(#0B83DA,#2966e0);
+}
+
+.projectDes:hover{
+    cursor: all-scroll;
+}
+
+.projectDes{
+    display:none; 
+    background-color:#DAEFFE;
+    padding:25px;
+}
 
 .projectDetailsCol{
 padding:20px;
@@ -51,3 +64,4 @@ background: #F9B402;
 border-radius: 0px;
 transform:translate(-3px, 0px);
 }
+
