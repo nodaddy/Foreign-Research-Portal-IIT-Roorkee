@@ -9,22 +9,53 @@ import {API_ENDPOINT} from "../config";
 
 function ProjectDetails(props){
 //Component to show project details
-    var vl="";
+    var vl="No message from applicant";
     var i = 1;
     return(
         <div className="projectDetail" align="left" style={{width:'100%'}}>
-            
+             
             <div className="container-fluid">
-                <div className="row" onClick={()=>{var idnm = props.title.toString();if(i%2!=0){document.getElementById(idnm).style.display = 'block';}else{document.getElementById(idnm).style.display = 'none';} i++;} }>
-                <div className="col-sm-1">
-                <img id="rec"></img><br/>
-                <div id="rot"></div>
+                <div className="row">
+                <div className="col-sm-1" style={{borderRight:'2px solid rgb(8, 114, 189)'}}>
+                <span title="Click here to bookmark this project"><img onClick={()=>{
+                    document.getElementById('rec').style.background="#F9B402";
+                axios.post(
+                    API_ENDPOINT + 'users/addbookmark/',
+                    {
+                         "pTitle":props.title,  
+                    },
+                    {
+                        headers: {
+                            Authorization: 'Token ' + localStorage.getItem('token')
+                        }
+                    }
+                ).then((res)=>{
+                    alert("bookmark added");
+                });
+            }} id="rec"></img></span><br/>
+                <div onClick={()=>{
+                    
+                axios.post(
+                    API_ENDPOINT + 'users/addbookmark/',
+                    {
+                         "pTitle":props.title,  
+                    },
+                    {
+                        headers: {
+                            Authorization: 'Token ' + localStorage.getItem('token')
+                        }
+                    }
+                );
+            }} id="rot"></div>
                 </div>
-                    <div className="col-sm-5 projectDetailsCol" id="projectTitle">{props.title}</div>
-                    <div className="col-sm-3 projectDetailsCol" id="university">{props.university}</div>
-                    <div className="col-sm-3 projectDetailsCol" id="deadline">{props.deadline}</div>
+                    <div className="col-sm-5 projectDetailsCol" onClick={()=>{ document.getElementById(props.title).style.display='block' }} id="projectTitle">{props.title}</div>
+                    <div className="col-sm-3 projectDetailsCol" onClick={()=>{ document.getElementById(props.title).style.display='block' }} id="university">{props.university}</div>
+                    <div className="col-sm-3 projectDetailsCol" onClick={()=>{ document.getElementById(props.title).style.display='block' }} id="deadline">{props.deadline}</div>
                 </div>   
                 <div className="row projectDes" id={props.title}>
+                <div className="row" style={{paddingRight:"50px"}} align="right"><button onClick={()=>{
+                       document.getElementById(props.title).style.display = 'none';
+                    }} align="center" style={{backgroundColor:'white',color:'red'}}><b>Submit later <span style={{color:"red"}}>[ X ]</span></b></button></div>
                     <div className="col-sm-12" align="left">
                     <h4 align="center" style={{color:'#0B275B', fontFamily:'roboto'}}><b>Project Details</b></h4><br/>
                     <div className="row"><h5><b>Description</b></h5>{props.description}</div><br/>
@@ -37,7 +68,7 @@ function ProjectDetails(props){
                     <div className="row" align="center"><h5><b>A statement of the importance of the proposed research to your future (250 words)
 </b></h5>
                     
-                    <textarea onChange={(e)=>{
+                    <textarea placeholder="Applican't hasn't typed anyting" onChange={(e)=>{
                         vl = e.target.value;
                     }} id="proposal" rows="10" cols="90"></textarea>
                     
@@ -57,7 +88,9 @@ function ProjectDetails(props){
                                    Authorization: 'Token ' + localStorage.getItem('token')
                                }
                            }
-                       )
+                       );
+                       alert("Your application has been sent and is under review");
+                       document.getElementById(props.title).style.display = 'none';
                     }} align="center" style={{backgroundColor:'white',color:'green'}}><b>Submit</b></button>
                     </div>
                     </div>
@@ -104,9 +137,12 @@ class Projects extends Component{
     render(){
         return(
             <div className="container-fluid" style={{width:'100%'}}>
-                <h3 align="center">Projects</h3>
+                <h3 style={{color:'#072662'}} align="center">PROJECTS</h3>
                 <br/>
                 {
+                    this.state.projectss.length==0? <div>No projects available</div>: ""
+                }
+                {   
                     this.state.projectss.map(function(obj,index){
                         let tit = obj.fields.title;
                         let uni = obj.fields.university;

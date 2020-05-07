@@ -21,11 +21,13 @@
     font-size: 30px;
     line-height: 36px;
     /* identical to box height */
-    
-    
     color: #072662;
     }
     
+    .refresh:hover{
+        cursor: pointer;
+        background: linear-gradient(white);
+    }
     /*.projectData{
     font-family: Barlow;
     font-style: normal;

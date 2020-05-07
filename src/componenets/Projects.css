@@ -3,15 +3,18 @@
     border-radius: 5px;
     margin-bottom:10px;
     }
-.projectDetail:hover{
+
+.projectDetailsCol:hover{
     cursor: pointer;
-    background:linear-gradient(#0B83DA,#2966e0);
-}
+    }
 
 .projectDes:hover{
     cursor: all-scroll;
 }
 
+.bmark:hover{
+    background-color: aqua;
+}
 .projectDes{
     display:none; 
     background-color:#DAEFFE;
@@ -54,14 +57,19 @@ height: 13.5px;
 margin-left:10px;
 background: #F9B402;
 transform: rotate(45deg);
+margin-top: 0px;
+}
+#rec:hover{
+    background: #F9B402;
+    cursor: crosshair;
 }
 #rec{
 width: 19.46px;
 height: 53.26px;
 margin-left:10px;
-margin-bottom:-7px;
+margin-bottom:0px;
 background: #F9B402;
 border-radius: 0px;
-transform:translate(-3px, 0px);
+transform:translate(0px, 0px);
 }
 
