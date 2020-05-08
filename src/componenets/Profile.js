@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './Profile.css';
 import axios from "axios";
 import { API_ENDPOINT } from '../config';
+import {dummyPp} from '../assets'
 
 class Profile extends Component {
     state = {
@@ -50,29 +51,73 @@ class Profile extends Component {
                         <span className="spa" id="email">Email Address: {this.state.email}</span><br/>
 
                     </div>
-                    <div className="col-sm-4" align="right">
-                        <img id="PP" src={this.props.PP}></img>
+                    <div className="col-sm-4" style={{paddingTop:'10px'}} align="center">
+                        <img id="PP" src={dummyPp} style={{background:'#FFC839', borderRadius:'7px', width:'35%'}}></img>
                     </div>
                     <div className="col-sm-3" align="right">
 
                     </div>
                 </div><br/>
                 <hr/>
-                <div className="row"  align="left" id="additionalInfo"><br/>
-                    <div className="col-sm-6"><span className="spa" id="phone">Phone : {this.state.phone}</span><br/>
-                    <span className="spa" id="phone">Drive link to CV : {this.state.cv}</span>
+                <div id="additionalInfo">
+                <div className="row"  align="left"><br/>
+                    <div className="col-sm-6"><b>Phone Number:</b><br/> <input onChange={(e)=>{
+                        this.setState({phone:e.target.value});
+                    }} style={{border:'1px solid grey', width:'50%', marginTop:'6px', padding:'5px'}} placeholder={this.state.phone} className="spa" id="phone"></input><br/>
+    
+                    
                     </div>
-                    <div className="col-sm-6"><span className="spa" id="phone">Skype Name : {this.state.skype}</span></div>
+                    <div className="col-sm-6"><b>Skype:</b><br/> <input onChange={(e)=>{
+                        this.setState({skype:e.target.value});
+                    }} style={{border:'1px solid grey', width:'50%', marginTop:'6px', padding:'5px'}} placeholder={this.state.skype} className="spa" id="skype"></input><br/>
+    
   
                 </div>
-                <div className="row"  align="left" id="additionalInfo" style={{paddingLeft:'90px'}}><br/>
-                    <button onClick={this.logout} className="col-sm-1 hoverHand" id="rightOfNav">Logout </button>
+                </div>
+                <br/>
+                <div className="row">
+                    <div className="col-sm-12">
+                        <b>Drive link to your CV:</b><br/>
+                    <input onChange={(e)=>{
+                        this.setState({cv:e.target.value});
+                    }} style={{border:'1px solid grey', width:'100%', marginTop:'6px', padding:'5px'}} placeholder={this.state.cv} className="spa" id="cv"></input>
+                </div>
+                </div>
+                </div>
+                <div className="row"  align="left" id="additionalInfo" style={{paddingLeft:'80px'}}>
+                <div className="col-sm-6"><button style={{width:'40%',boxShadow:'0px 2px 3px 2px silver',backgroundColor:"white", color:'green' }} onClick={()=>{
+                    
+                    axios
+            .post(
+                API_ENDPOINT + 'users/updateprofile/',
+                {
+                    cv: this.state.cv,
+                    skype: this.state.skype,
+                    phone: this.state.phone,
+                    
+                },
+                {
+                    headers: {
+                        Authorization: 'Token ' + localStorage.getItem('token')
+                    }
+                })
+            .then((res) => {
+                window.location.reload();
+            })
+            .catch(() => {
+                alert(`Error updating profile`)
+            })
+                }} className="hoverHand" id="rightOfNav">Update</button></div>
+                    <div className="col-sm-6"><button style={{width:'40%',boxShadow:'0px 2px 3px 2px silver' }} onClick={this.logout} className="hoverHand" id="rightOfNav">Logout </button></div>
+                    
                 </div>
 
                  </div>
 
         );
-    }
+        }
+        
+    
 
     logout = function () {
         axios

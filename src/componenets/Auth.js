@@ -5,7 +5,16 @@ import {API_ENDPOINT} from "../config";
 
 class Auth extends Component {
     state = {
-        mode: 'login'
+        mode: 'login',
+        r_name:"",
+        r_password:"",
+        r_dept:"",
+        r_enrlno:"",
+        r_phone:"",
+        r_grad_yr:"",
+        r_email:"",
+        r_skype:"",
+        r_resume:""
     };
 
     render() {
@@ -15,13 +24,13 @@ class Auth extends Component {
                     {this.state.mode === 'login' ?
                         <div className="login-form" onSubmit={() => {
                         }}>
-                            <input
+                            <input 
                                 onChange={(e) => {
                                     this.setState({l_username: e.target.value})
                                 }}
                                 type="text"
-                                placeholder="username"/>
-                            <input
+                                placeholder="Email"/>
+                            <input 
                                 onChange={(e) => {
                                     this.setState({l_password: e.target.value})
                                 }}
@@ -42,49 +51,49 @@ class Auth extends Component {
                                     this.setState({r_name: e.target.value})
                                 }}
                                 type="text"
-                                placeholder="Name"/>
+                                placeholder="Full name [Required]"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
                                     this.setState({r_password: e.target.value})
                                 }}
                                 type="password"
-                                placeholder="Password"/>
+                                placeholder="Your brand new password [Required]"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
                                     this.setState({r_dept: e.target.value})
                                 }}
                                 type="text"
-                                placeholder="Department"/>
+                                placeholder="Department [Required]"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
                                     this.setState({r_enrlno: e.target.value})
                                 }}
                                 type="text"
-                                placeholder="Enrollment Number"/>
+                                placeholder="Enrollment Number [Required]"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
                                     this.setState({r_phone: e.target.value})
                                 }}
                                 type="text"
-                                placeholder="Phone"/>
+                                placeholder="Phone [Required]"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
                                     this.setState({r_grad_yr: e.target.value})
                                 }}
                                 type="text"
-                                placeholder="Year of graduation"/>
+                                placeholder="Year of graduation [Required]"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
                                     this.setState({r_email: e.target.value})
                                 }}
                                 type="email"
-                                placeholder="Email"/>
+                                placeholder="Email [Required]"/>
                             <br/><br/>
                             <input
                                 onChange={(e) => {
@@ -98,7 +107,7 @@ class Auth extends Component {
                                     this.setState({r_resume: e.target.value})
                                 }}
                                 type="text"
-                                placeholder="Resume"/>
+                                placeholder="Resume(Drive link) [Required]"/>
                             <br/><br/>
                             <button onClick={this.register}>Register</button>
                             <p className="message">Already registered? <span className="link" onClick={() => {
@@ -129,6 +138,17 @@ class Auth extends Component {
     }.bind(this);
 
     register = function () {
+        
+                    if(this.state.r_name=="" ||
+                    this.state.r_password=="" ||
+                    this.state.r_dept=="" ||
+                    this.state.r_enrlno=="" ||
+                    this.state.r_phone=="" ||
+                    this.state.r_grad_yr=="" ||
+                    this.state.r_email=="" ||
+                    this.state.r_resume==""){
+                        alert("REQUIRED FIELDS CAN'T BE EMPTY")
+                    }
         axios
             .post(
                 API_ENDPOINT + 'users/register/',

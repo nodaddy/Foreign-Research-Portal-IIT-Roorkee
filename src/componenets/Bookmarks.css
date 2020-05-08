@@ -6,7 +6,7 @@
     padding-bottom:0px;
     background: #0B83DA;
     border-radius: 5px;
-    margin-bottom:10px;
+    margin-bottom:10px;box-shadow: 3px 2px 4px 2px silver; 
 }
     
 .projectDetailsCol{

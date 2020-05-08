@@ -66,13 +66,14 @@ class Results extends Component{
             <div className="container-fluid">
                 <h3 style={{color:'#072662'}} align="center">Results</h3><br/>
                 <div>
-                {
+                {   
+                    this.state.results.length!=0?
                     this.state.results.map(function(obj,index){
                         let tit = obj.fields.title;
                         let uni = obj.fields.university;
                         let studentList = obj.fields.space_seperated_emails_of_selected_students;
                         let studentArray = studentList.split(" ");
-                        console.log(obj);
+                        //console.log(obj);
                         return(
                             <div className="row" align="center" style={{padding:'0px',width:'100%'}}>
                             <div className="col-sm-12" id="ProjectDetailsArea">
@@ -82,8 +83,8 @@ class Results extends Component{
                             
                        </div>
                        </div>
-                        );
-                    })
+                        )
+                    }):<div align="center">Results shall be declared soon</div>
                
                 }
                 </div>

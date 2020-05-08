@@ -14,7 +14,14 @@ function ApplicationDetails(props){
         <div className="container-fluid">
             <div className="row projectData">
             <div className="col-sm-1">
-            <img id="rec" style={{backgroundColor:props.statusColor}}></img><br/>
+            <img id="rec" style={{backgroundColor:props.statusColor}} onClick={()=>{
+                if(props.statusColor=='#93FF33'){
+                    alert("Congratulations :)")
+                }
+                else{
+                    alert("Under Review, Keep learning :)")
+                }
+            }}></img><br/>
             
             </div>
                 <div className="col-sm-5 projectDetailsColapp"  id="projectTitle">{props.title}</div>
@@ -115,6 +122,8 @@ class Applications extends Component{
                     {/*ProjectDetail is function Component defined in the above code*/}
                     {
                      
+                        this.state.acceptedProjects.length==0? <div align="center">None Accepted<br/>Keep learning, wish you all the best!</div>: ""
+                    
                     }
                     {
                        this.state.acceptedProjects.map(function(obj,index){
@@ -157,7 +166,7 @@ class Applications extends Component{
                         var pDeadline = anArray[2];
                         
                         return(
-                            <ApplicationDetails className={pTitle} title={pTitle} university={pUniversity} deadline={pDeadline}></ApplicationDetails>
+                            <ApplicationDetails className={pTitle} title={pTitle} university={pUniversity} deadline={pDeadline} statusColour="#F9B402"></ApplicationDetails>
                         ) 
                         
                     }

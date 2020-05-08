@@ -55,7 +55,7 @@ function ProjectDetails(props){
                 <div className="row projectDes" id={props.title}>
                 <div className="row" style={{paddingRight:"50px"}} align="right"><button onClick={()=>{
                        document.getElementById(props.title).style.display = 'none';
-                    }} align="center" style={{backgroundColor:'white',color:'red'}}><b>Submit later <span style={{color:"red"}}>[ X ]</span></b></button></div>
+                    }} align="center" style={{width:'10%',boxShadow:'0px 2px 3px 2px silver',backgroundColor:"white", color:'green', borderRadius:'3px' }}><b>Close <span style={{color:"red"}}>[ X ]</span></b></button></div>
                     <div className="col-sm-12" align="left">
                     <h4 align="center" style={{color:'#0B275B', fontFamily:'roboto'}}><b>Project Details</b></h4><br/>
                     <div className="row"><h5><b>Description</b></h5>{props.description}</div><br/>
@@ -91,7 +91,7 @@ function ProjectDetails(props){
                        );
                        alert("Your application has been sent and is under review");
                        document.getElementById(props.title).style.display = 'none';
-                    }} align="center" style={{backgroundColor:'white',color:'green'}}><b>Submit</b></button>
+                    }} align="center" style={{width:'20%',boxShadow:'0px 2px 3px 2px silver',backgroundColor:"white", color:'green', borderRadius:'3px' }}><b>Submit</b></button>
                     </div>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ class Projects extends Component{
                 <h3 style={{color:'#072662'}} align="center">PROJECTS</h3>
                 <br/>
                 {
-                    this.state.projectss.length==0? <div>No projects available</div>: ""
+                    this.state.projectss.length==0? <div align="center">No projects available</div>: ""
                 }
                 {   
                     this.state.projectss.map(function(obj,index){

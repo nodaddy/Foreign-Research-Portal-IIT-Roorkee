@@ -45,7 +45,7 @@ class TopNav extends Component {
                             backgroundColor: '#0B83DA',
                             textDecoration: 'none',
                             color: 'white'
-                        }}><span style={{}}><img src={dummyPp} style={{width:'15%', backgroundColor:'transparent'}}></img></span>
+                        }}><span><img src={dummyPp} style={{width:'15%', backgroundColor:'transparent'}}></img></span>
                          {this.state.name}
                      </Link></button></div>
                             :
