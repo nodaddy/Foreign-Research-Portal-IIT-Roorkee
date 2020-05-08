@@ -140,7 +140,7 @@ class Projects extends Component{
                 <h3 style={{color:'#072662'}} align="center">PROJECTS</h3>
                 <br/>
                 {
-                    this.state.projectss.length==0? <div align="center">No projects available</div>: ""
+                    this.state.projectss.length==0? <div align="center">Projects will be shown here</div>: ""
                 }
                 {   
                     this.state.projectss.map(function(obj,index){

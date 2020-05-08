@@ -122,7 +122,7 @@ class Applications extends Component{
                     {/*ProjectDetail is function Component defined in the above code*/}
                     {
                      
-                        this.state.acceptedProjects.length==0? <div align="center">None Accepted<br/>Keep learning, wish you all the best!</div>: ""
+                        this.state.acceptedProjects.length==0? <div align="center">Accepted applications will be shown here.</div>: ""
                     
                     }
                     {
@@ -153,7 +153,7 @@ class Applications extends Component{
                     <div className="col-sm-12" id="PastProjectDetailsArea">
                     {/*ProjectDetail is function Component defined in the above code*/}
                     {
-                    this.state.appliedProjectsArray.length==0? <div align="center">None in review<br/>If you applied for the projects and can't see them here, there results's have been declared</div>: ""
+                    this.state.appliedProjectsArray.length==0? <div align="center">If you applied for the projects and can't see them here, there results's have been declared</div>: ""
                 }
                     {   
                         
