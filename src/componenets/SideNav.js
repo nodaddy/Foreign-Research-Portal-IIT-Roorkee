@@ -25,7 +25,8 @@ class SideNav extends Component {
                 </div>
                 <hr/>
                 <div className="row sideNavLink" align="center">
-                    <Link to="/team" id="team" className="col-sm-12 sideNavLink1">Team</Link>
+                    
+                    <a href="https://ir.iitr.ac.in/IR_Cell_ContactUs/" target="ircteam" id="team" className="col-sm-12 sideNavLink1">Team</a>
                 </div>
 
             </div>

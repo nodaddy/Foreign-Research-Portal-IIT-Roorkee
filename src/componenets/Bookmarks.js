@@ -27,7 +27,7 @@ function Bookmark(props){
                         }
                     }
                 );
-                window.location.reload();
+                //window.location.reload();
             }} id="rec" style={{backgroundColor:'#F9B402'}}></img></span><br/>
             <div id="rot" style={{backgroundColor:'white'}}></div>
             </div>
