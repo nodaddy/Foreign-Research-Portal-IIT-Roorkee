@@ -26,8 +26,10 @@ function Bookmark(props){
                             Authorization: 'Token ' + localStorage.getItem('token')
                         }
                     }
-                );
-                //window.location.reload();
+                ).then((res)=>{
+                    window.location.reload(); 
+                });
+                
             }} id="rec" style={{backgroundColor:'#F9B402'}}></img></span><br/>
             <div id="rot" style={{backgroundColor:'white'}}></div>
             </div>
