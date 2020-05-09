@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import './Bookmarks.css'
 import {withRouter} from 'react-router-dom';
 import axios from 'axios'
-import {API_ENDPOINT} from '../config'
+import {API_ENDPOINT, contact_email} from '../config'
 
 
 function Bookmark(props){
@@ -111,9 +111,10 @@ componentDidMount(){
         //console.log(this.state.projectss[0].fields.title);
 
         //this.setState({"projectss":res.data});
+        //var j =  contact_email;
     })
     .catch(() => {
-        alert(`something went wrong while connecting internships/bookmarks`)
+        alert(`error at internships/bookmarks/, please contact ${contact_email}`)
     })
 }
 

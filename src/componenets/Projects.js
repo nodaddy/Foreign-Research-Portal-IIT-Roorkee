@@ -3,7 +3,7 @@ import './Projects.css';
 import {tagLogo} from '../assets'
 import {withRouter} from 'react-router-dom';
 import axios from "axios";
-import {API_ENDPOINT} from "../config";
+import {API_ENDPOINT, contact_email} from "../config";
 
 
 
@@ -119,15 +119,12 @@ class Projects extends Component{
             })
         .then((res) => {
             let projs = JSON.parse(res.data.jsonStuff);
-           // alert(`something went wrong`)
+           
             this.setState({projectss:projs});
-            //console.log("dfghjkl");
-            //console.log(this.state.projectss[0].fields.title);
-
-            //this.setState({"projectss":res.data});
+            
         })
         .catch(() => {
-            alert(`something went horribly wrong`)
+            alert(`error at internships/list/, please contact ${contact_email}`)
         })
     }
 

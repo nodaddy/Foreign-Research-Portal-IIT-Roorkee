@@ -2,7 +2,7 @@ import React,{Component} from 'react'
 import './Applications.css'
 import {withRouter} from 'react-router-dom';
 import axios from "axios"
-import {API_ENDPOINT} from "../config";
+import {API_ENDPOINT, contact_email} from "../config";
 import {refresh} from '../assets'
 
 
@@ -80,8 +80,10 @@ class Applications extends Component{
                 }
                 this.setState({appliedProjectsArray: strr}); 
 
+            }).catch(()=>{
+                alert(`error at users/myapps, please contact ${contact_email}`)
             })
-//write .catch()
+ 
             axios
             .get(API_ENDPOINT + 'users/myaccepted/',
             {
@@ -101,6 +103,8 @@ class Applications extends Component{
                 }
                 this.setState({acceptedProjects: strr}); 
 
+            }).catch(()=>{
+                alert(`error at users/myaccepted, please contact ${contact_email}`)
             })
             
     }
@@ -129,7 +133,7 @@ class Applications extends Component{
                        this.state.acceptedProjects.map(function(obj,index){
                         console.log(obj);
                         if(obj!=" " && obj!=""){
-                        var anArray = obj.split('*');
+                        var anArray = obj.split("%parting_string%");
                         var pTitle = anArray[0];
                         var pUniversity = anArray[1];
                         var pDeadline = anArray[2];
@@ -138,7 +142,7 @@ class Applications extends Component{
                             <ApplicationDetails title={pTitle} university={pUniversity} deadline={pDeadline} statusColor="#93FF33"></ApplicationDetails>
                         )
                         } else if(obj==" " || obj=="") {
-                            return <div>jg</div>
+                            return <div></div>
                         }
 
                     })
@@ -160,7 +164,7 @@ class Applications extends Component{
                        // var acceptedProjArray = this.state.acceptedProjects;
                         this.state.appliedProjectsArray.map((obj,index)=>{
                         if(obj!=" " && obj!=""){
-                        var anArray = obj.split('*');
+                        var anArray = obj.split("%parting_string%");
                         var pTitle = anArray[0];
                         var pUniversity = anArray[1];
                         var pDeadline = anArray[2];
