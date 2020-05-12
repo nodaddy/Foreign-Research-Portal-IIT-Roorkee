@@ -39,11 +39,19 @@ function ApplicationDetails(props){
                     <div className="row"><h5><b>Critical Skills</b></h5>{props.criticalSkills}</div><br/>
                     <div className="row"><h5><b>Stipend</b></h5>{props.stipend}</div><br/>
                     <div className="row"><h5><b>Duration</b></h5>{props.duration}</div><br/>
-                    <div className="row"><h5><b>Eligibility</b></h5>{props.eligibility}</div><br/>
+                    <div className="row"><h5><b>Eligibility</bstyle={{width:'60%',background: '#FCFDFE',padding:'4px',border:'0px',
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.15)',color:'#93FF33', borderRadius:'4px' }}></h5>{props.eligibility}</div><br/>
                     <div className="row"><h5><b>Contact Details</b></h5>{props.contactDetails}</div><br/>
                    
                     </div>
                 </div>*/}
+                {
+                    props.statusColor=='#93FF33'?
+                <div className="row" align="center"><hr/><h5 style={{color:'#072662', fontFamily:''}}><b>Congratulations! We would love to know about your internship!</b></h5>
+                <div className="col-sm-12"> <a className="llink" href="https://medium.com/@ircell/" ><button style={{marginBottom:'20px', width:'50%',background: '#FCFDFE',padding:'4px',border:'0px',
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.15)',color:'#93FF33', borderRadius:'4px' }} className="hoverHand" id="rightOfNav"><h5><b>Add your internship experience</b></h5></button></a></div>
+                </div> : <div></div>
+                }
         </div>
     </div>
     );
@@ -138,8 +146,9 @@ class Applications extends Component{
                         var pUniversity = anArray[1];
                         var pDeadline = anArray[2];
 
-                        return(
-                            <ApplicationDetails title={pTitle} university={pUniversity} deadline={pDeadline} statusColor="#93FF33"></ApplicationDetails>
+                        return(<div>
+                            <ApplicationDetails title={pTitle} university={pUniversity} deadline={pDeadline} statusColor="#93FF33"></ApplicationDetails><br/>
+                        </div>
                         )
                         } else if(obj==" " || obj=="") {
                             return <div></div>
@@ -170,7 +179,10 @@ class Applications extends Component{
                         var pDeadline = anArray[2];
                         
                         return(
+                            <div>
                             <ApplicationDetails className={pTitle} title={pTitle} university={pUniversity} deadline={pDeadline} statusColour="#F9B402"></ApplicationDetails>
+                            <br/>
+                            </div>
                         ) 
                         
                     }

@@ -55,7 +55,8 @@ function ProjectDetails(props){
                 <div className="row projectDes" id={props.title}>
                 <div className="row" style={{paddingRight:"50px"}} align="right"><button onClick={()=>{
                        document.getElementById(props.title).style.display = 'none';
-                    }} align="center" style={{width:'10%',boxShadow:'0px 2px 3px 2px silver',backgroundColor:"white", color:'green', borderRadius:'3px' }}><b>Close <span style={{color:"red"}}>[ X ]</span></b></button></div>
+                    }} align="center" style={{width:'10%',background: '#FCFDFE',padding:'7px',border:'0px',
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.15)',color:'#93FF33', borderRadius:'5px' }}><b>Close [ X ] <span style={{color:"red"}}></span></b></button></div>
                     <div className="col-sm-12" align="left">
                     <h4 align="center" style={{color:'#0B275B', fontFamily:'roboto'}}><b>Project Details</b></h4><br/>
                     <div className="row"><h5><b>Description</b></h5>{props.description}</div><br/>
@@ -74,7 +75,10 @@ function ProjectDetails(props){
                     
                     </div>
                     <div className="row" align="center">
-                    <button onClick={()=>{
+                        <br/>
+                        <br/>
+
+                    <button id="subProp" onClick={()=>{
                        
                        //alert(vl);
                        axios.post(
@@ -91,7 +95,9 @@ function ProjectDetails(props){
                        );
                        alert("Your application has been sent and is under review");
                        document.getElementById(props.title).style.display = 'none';
-                    }} align="center" style={{width:'20%',boxShadow:'0px 2px 3px 2px silver',backgroundColor:"white", color:'green', borderRadius:'3px' }}><b>Submit</b></button>
+                    }} align="center" style={{width:'15%',background: '#FCFDFE',padding:'7px',border:'0px',
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.15)',color:'#93FF33', borderRadius:'5px' }}><b id="kdk">Submit</b></button>
+                    <br/>
                     </div>
                     </div>
                 </div>

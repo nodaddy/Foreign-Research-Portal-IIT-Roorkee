@@ -5,6 +5,10 @@
     box-shadow: 3px 2px 4px 2px silver; 
     }
     
+.llink:hover{
+    background-color: transparent;
+}
+
     .projectDetailsColapp{
     padding:20px;
     font-family: Barlow;

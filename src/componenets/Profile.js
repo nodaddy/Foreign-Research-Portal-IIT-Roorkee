@@ -85,7 +85,8 @@ class Profile extends Component {
                 </div>
                 </div>
                 <div className="row"  align="left" id="additionalInfo" style={{paddingLeft:'80px'}}>
-                <div className="col-sm-6"><button style={{width:'40%',boxShadow:'0px 2px 3px 2px silver',backgroundColor:"white", color:'green' }} onClick={()=>{
+                <div className="col-sm-5"><button style={{width:'60%',background: '#FCFDFE',padding:'4px',border:'0px',
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.15)',color:'#93FF33', borderRadius:'4px' }} onClick={()=>{
                     
                     axios
             .post(
@@ -108,8 +109,10 @@ class Profile extends Component {
                 alert(`Error updating profile`)
             })
                 }} className="hoverHand" id="rightOfNav">Update</button></div>
-                    <div className="col-sm-6"><button style={{width:'40%',boxShadow:'0px 2px 3px 2px silver' }} onClick={this.logout} className="hoverHand" id="rightOfNav">Logout </button></div>
+                    <div className="col-sm-5"><button style={{width:'60%',background: '#0B83DA',padding:'4px',border:'0px',
+                    boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.15)',color:'white', borderRadius:'4px' }} onClick={this.logout} className="hoverHand" id="rightOfNav">Logout </button></div>
                     
+                    <div className="col-sm-2"></div>
                 </div>
 
                  </div>

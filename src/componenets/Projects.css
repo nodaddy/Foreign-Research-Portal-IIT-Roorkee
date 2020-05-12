@@ -9,8 +9,25 @@
     cursor: pointer;
     }
 
+#kdkd{
+    width: 69.37px;
+height: 26px;
+left: 643.31px;
+top: 1597.76px;
+
+font-family: Barlow;
+font-style: normal;
+font-weight: 600;
+font-size: 21px;
+line-height: 25px;
+}
+
 .projectDes:hover{
     cursor: all-scroll;
+}
+
+#subProp:hover{
+    cursor: pointer;
 }
 
 .bmark:hover{
@@ -74,3 +91,6 @@ border-radius: 0px;
 transform:translate(0px, 0px);
 }
 
+#proposal{
+    border:0px;
+}
