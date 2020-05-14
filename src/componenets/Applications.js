@@ -89,7 +89,7 @@ class Applications extends Component{
                 this.setState({appliedProjectsArray: strr}); 
 
             }).catch(()=>{
-                alert(`error at users/myapps, please contact ${contact_email}`)
+                alert(`Please check your internet connection`)
             })
  
             axios
@@ -112,7 +112,7 @@ class Applications extends Component{
                 this.setState({acceptedProjects: strr}); 
 
             }).catch(()=>{
-                alert(`error at users/myaccepted, please contact ${contact_email}`)
+                alert(`Please check your internet connection`)
             })
             
     }

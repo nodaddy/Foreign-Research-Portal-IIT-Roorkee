@@ -130,7 +130,7 @@ class Projects extends Component{
             
         })
         .catch(() => {
-            alert(`error at internships/list/, please contact ${contact_email}`)
+            alert(`Please check our internet connection, error internships/list/, or please contact ${contact_email}`)
         })
     }
 

@@ -35,16 +35,16 @@ class TopNav extends Component {
                       ></img>
                       </div>
               <div class="navbar-header navbar-brand" style={{color:'white'}}>
-                <b style={{fontSize:'25px', fontFamily:'Tw'}}> Foreign Research Portal</b>
+                <b style={{fontSize:'25px', fontFamily:'Tw !important'}}> Foreign Research Portal</b>
               </div>
               <ul class="nav navbar-nav navbar-right" style={{}}>
                 <li class="active">
                 {
                       this.props.loggedIn ?
-                      <div style={{marginRight:'20px'}}>
+                      <div style={{marginRight:'20px', border:'1px solid white'}}>
                       <Link style={{color:'white', backgroundColor:'#0B83DA', fontSize:'17px'}} className="hoverHand" title="Your profile"  to='/dashboard'
                       >
-                      <img src={dummyPp} style={{width:'50px',fontFamily:'Barlow', backgroundColor:'transparent'}}></img> <b>{this.state.name}</b>
+                      <img src={dummyPp} style={{width:'50px',fontFamily:'Roboto', backgroundColor:'transparent'}}></img> <b>{this.state.name}</b>
                    </Link>
                    </div>
                           :

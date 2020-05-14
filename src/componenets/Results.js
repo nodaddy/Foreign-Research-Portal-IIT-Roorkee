@@ -57,7 +57,7 @@ class Results extends Component{
             //this.setState({"projectss":res.data});
         })
         .catch(() => {
-            alert(`something went horribly wrong`)
+            alert(`Please check your internet connection`)
         })
     }
 

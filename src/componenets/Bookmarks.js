@@ -114,7 +114,7 @@ componentDidMount(){
         //var j =  contact_email;
     })
     .catch(() => {
-        alert(`error at internships/bookmarks/, please contact ${contact_email}`)
+        alert(`Please check your internet connection`)
     })
 }
 
