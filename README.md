@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+AN APP THAT ENABLES STUDENTS TO APPLY FOR PROJECTS AT DIFFERENT UNIVERSITIES ONLINE
+
 
 ## Available Scripts
 
